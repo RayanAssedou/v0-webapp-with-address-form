@@ -1,7 +1,7 @@
-import { redirect } from "next/navigation"
 import Link from "next/link"
 import FaqAccordion from "@/components/faq-accordion"
 import SketchfabModel from "@/components/sketchfab-model"
+import { startQuote } from "./actions"
 
 // Import icons individually to avoid bundling issues
 import { Sun } from "lucide-react"
@@ -12,10 +12,6 @@ import { Droplet } from "lucide-react"
 import { Zap } from "lucide-react"
 
 export default function Home() {
-  async function startQuote() {
-    redirect("/quote/address")
-  }
-
   return (
     <div className="min-h-screen bg-[#f5f5f0]">
       <div className="w-full mx-auto">
